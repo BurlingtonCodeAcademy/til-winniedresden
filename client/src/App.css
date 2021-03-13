@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -28,11 +31,69 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Home{
+  color: pink;
+  font-family: 'Cedarville Cursive', cursive;
+}
+#form{
+  color:palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 25px;
+}
+input, textarea, select {
+  color: palevioletred;
+  background-color: rgb(228, 241, 247);
+  width : 300px;
+  height: 50px;
+  padding: 0;
+  margin-left: 10;
+  box-sizing: border-box;
+  border: 1px solid palevioletred;
+ 
+}
+#ViewAll{
+  z-index:5;
+}
+button{
+  background-color: pink;
+  border: 1px solid palevioletred;
+  color: white;
+}
+/* #journal{
+  background-color:lightskyblue;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  border: 1px solid black;
+  grid-template-areas: 
+    "date data";
+    
+} */
+/* viewAll css */
+h4{
+  
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+}
+#all-posts{
+  padding-left: 10px;
+  border: 2px solid pink;
+}
+#search{
+  height: 25px;
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+  color:palevioletred;
+  font-size: 25px;
+  width: 200px;
+}
+#dropdown{
+  height: 25px;
+  width: 100px;
+  display: inline-block;
+}
+#edit-title{
+  font-size: 25px;
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
 }
