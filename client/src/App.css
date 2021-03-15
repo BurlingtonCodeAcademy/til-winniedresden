@@ -10,23 +10,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -35,6 +18,7 @@
   color: pink;
   font-family: 'Cedarville Cursive', cursive;
 }
+/*form formatting*/
 #form{
   color:palevioletred;
   font-family: 'Cedarville Cursive', cursive;
@@ -49,29 +33,14 @@ input, textarea, select {
   margin-left: 10;
   box-sizing: border-box;
   border: 1px solid palevioletred;
- 
-}
-#ViewAll{
-  z-index:5;
 }
 button{
   background-color: pink;
   border: 1px solid palevioletred;
   color: white;
 }
-/* #journal{
-  background-color:lightskyblue;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto;
-  border: 1px solid black;
-  grid-template-areas: 
-    "date data";
-    
-} */
-/* viewAll css */
+/* standard formatting for all the pages throughout the program */
 h4{
-  
   color: palevioletred;
   font-family: 'Cedarville Cursive', cursive;
 }
@@ -96,4 +65,11 @@ h4{
   font-size: 25px;
   color: palevioletred;
   font-family: 'Cedarville Cursive', cursive;
+}
+#submit{
+  color: white;
+  background-color: pink;
+  border: 1px solid palevioletred;
+  height: 20px;
+  width: 100px;
 }

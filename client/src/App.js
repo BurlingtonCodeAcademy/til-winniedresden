@@ -6,7 +6,7 @@ import Home from './components/Home';
 import ChangeAround from './components/ChangeAround';
 import ViewAll from './components/ViewAll'; 
 
-
+// route functionality to get from one page to another. 
 function App() {
   return (
     <div>

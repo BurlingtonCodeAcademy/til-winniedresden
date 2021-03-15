@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 export default function ViewAll() {
     //props ^
     const [entries, setEntries] = useState([]);
+    //start of search functionality 
     const [search, setSearch] = useState([])
     
    // fetch the journal entry data and map through it, putting each entry on the page. 
@@ -26,7 +27,7 @@ export default function ViewAll() {
             console.log(entries)
             console.log(entries[0]._id)
         })
-
+    //nav bar(does work), search bar that doesn't actually search, drop down for search bar, and prints results of of the posts that have been already created. 
     return (
         <div>
             <Nav></Nav>
@@ -53,15 +54,10 @@ export default function ViewAll() {
                     <h4>date:</h4> <div key={index + "-date"}>{post.date}</div>
                     <h4>Journal Entry:</h4><div key={index + "-content"}>{post.content}</div>
                     <h4>tags:</h4> <div key={index + "-tags"}>{post.tags}</div>
-                    <Link to={"/change"}><button>Edit</button></Link><button>Delete</button>
-                    
+                    <Link to={"/change/"+post._id}><button>Edit</button></Link><button>Delete</button> 
                 </div>
                 );
             })}
-            
-          
-
-           
         </div>
     )
 }
