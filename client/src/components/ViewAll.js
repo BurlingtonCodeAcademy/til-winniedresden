@@ -54,7 +54,7 @@ export default function ViewAll() {
                     <h4>date:</h4> <div key={index + "-date"}>{post.date}</div>
                     <h4>Journal Entry:</h4><div key={index + "-content"}>{post.content}</div>
                     <h4>tags:</h4> <div key={index + "-tags"}>{post.tags}</div>
-                    <Link to={"/change/"+post._id}><button>Edit</button></Link><button>Delete</button> 
+                    <Link to={"/change/"+post._id}><button>Edit</button></Link> 
                 </div>
                 );
             })}

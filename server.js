@@ -33,6 +33,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(staticDir));
 //schema and model have to match
 //endpoint / shows all entries into the journal
+
 app.post("/add", async (req, res) => {
   let newEntry = new PostModel({
     title: req.body.title,
@@ -41,8 +42,10 @@ app.post("/add", async (req, res) => {
     date: req.body.date,
     tags: req.body.tags,
   });
+  
   await newEntry.save();
-  res.status(200).send("New entry added")
+  //await window.alert("New entry added")
+  //res.status(301.reidrect).send("New entry added")
   res.redirect('/')
   //can we return to home page? or style this cuter? 
 });
@@ -50,15 +53,16 @@ app.post("/add", async (req, res) => {
 
 //updating an entry
 app.post("/edit/:id", async(req, res) => {
-  let updatedEntry = PostModel.findOneAndUpdate({_id:req.params.id});
-  console.log(updatedEntry)
+  // let updatedEntry = PostModel.findOneAndUpdate({_id:req.params.id});
+  // console.log(updatedEntry)
   let id = req.params.id
   let update = req.body
+  console.log(update)
   await updateEntry(id, update);
   res.redirect('/')
 })
  //deleting an entry:
- app.get("edit/:id", async(req, res) => {
+ app.get("/delete/:id", async(req, res) => {
    let deleteEntry = PostModel.findOneAndDelete({_id:req.params.id});
    console.log(deletedEntry)
    let id = req.params.id
@@ -81,16 +85,18 @@ res.json(entries);
 // directing the backend to the proper entry in the api 
 app.get(`/api/:id`, async (req, res) => {
   const entry = await PostModel.findOne({_id:req.params.id});
-  console.log(entry)
+  // console.log(entry)
   res.json(entry)
 }) 
 
 //function to add the updates
 async function updateEntry(id, update){
+  console.log(update)
   let updateEntry = {
+    
     $set : update
   }
-  await PostModel.updateOne({_id: ObjectId(id), updateEntry})
+  await PostModel.updateOne({_id: ObjectId(id)}, updateEntry)
 }
 
 
