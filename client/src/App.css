@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -7,32 +10,66 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Home{
+  color: pink;
+  font-family: 'Cedarville Cursive', cursive;
+}
+/*form formatting*/
+#form{
+  color:palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 25px;
+}
+input, textarea, select {
+  color: palevioletred;
+  background-color: rgb(228, 241, 247);
+  width : 300px;
+  height: 50px;
+  padding: 0;
+  margin-left: 10;
+  box-sizing: border-box;
+  border: 1px solid palevioletred;
+}
+button{
+  background-color: pink;
+  border: 1px solid palevioletred;
+  color: white;
+}
+/* standard formatting for all the pages throughout the program */
+h4{
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+}
+#all-posts{
+  padding-left: 10px;
+  border: 2px solid pink;
+}
+#search{
+  height: 25px;
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+  color:palevioletred;
+  font-size: 25px;
+  width: 200px;
+}
+#dropdown{
+  height: 25px;
+  width: 100px;
+  display: inline-block;
+}
+#edit-title{
+  font-size: 25px;
+  color: palevioletred;
+  font-family: 'Cedarville Cursive', cursive;
+}
+#submit{
+  color: white;
+  background-color: pink;
+  border: 1px solid palevioletred;
+  height: 20px;
+  width: 100px;
 }
